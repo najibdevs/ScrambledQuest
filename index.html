@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ScrambleQuest - a fun and engaging word scramble game"
+    />
+    <title>ScrambleQuest</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <header>
+          <h1>Word Scramble Game</h1>
+        </header>
+        <article>
+          <h2>WORD</h2>
+          <p>Time Left: 15s</p>
+          <form id="wordForm">
+            <input
+              type="text"
+              placeholder="Enter a valid word"
+              aria-label="Scrambled word input"
+            />
+            <ul>
+              <li>
+                <button type="button" aria-label="Refresh the current word">
+                  Refresh Word
+                </button>
+              </li>
+              <li>
+                <button type="submit" aria-label="Submit your answer">
+                  Check Word
+                </button>
+              </li>
+            </ul>
+          </form>
+          <p>Score: <span id="score">0</span></p>
+        </article>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
