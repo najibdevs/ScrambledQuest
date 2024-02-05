@@ -77,7 +77,7 @@ function displayScrambledWord() {
         wordElement.textContent = scrambledArray[currentWordIndex].word;
 
         clearInterval(timerInterval);
-        startTimer(15);
+        startTimer(30);
     } else {
         if (score === 15) {
             alert('Congratulations! You Win! You correctly unscrambled all the words.');
@@ -133,7 +133,6 @@ wordForm.addEventListener('submit', function (e) {
     document.querySelector('input[type="text"]').value = '';
 });
 
-const refreshButton = document.querySelector('[aria-label="Refresh the current word"]');
 refreshButton.addEventListener('click', function () {
     displayScrambledWord();
 });
