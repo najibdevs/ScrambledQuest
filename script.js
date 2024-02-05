@@ -1,51 +1,52 @@
 let words = [
     {
-        word: "Keyboard"
+        word: "Serendipity"
     },
     {
-        word: "Elephant"
+        word: "Paradox"
     },
     {
-        word: "Chocolate"
+        word: "Friendly"
     },
     {
-        word: "Universe"
+        word: "Enigma"
     },
     {
-        word: "Computer"
+        word: "Exciting"
     },
     {
-        word: "Astronomy"
+        word: "Melody"
     },
     {
-        word: "Butterfly"
+        word: "Flower"
     },
     {
-        word: "Adventure"
+        word: "Radiant"
     },
     {
-        word: "Microphone"
+        word: "Breeze"
     },
     {
-        word: "Waterfall"
+        word: "Harmony"
     },
     {
-        word: "Pineapple"
+        word: "Simple"
     },
     {
-        word: "Submarine"
+        word: "Laughter"
     },
     {
-        word: "Landscape"
+        word: "Gentle"
     },
     {
-        word: "Encryption"
+        word: "Delight"
     },
     {
-        word: "Harmonica"
+        word: "Sunshine"
     }
-
 ];
+
+
 let currentWordIndex = 0;
 let score = 0;
 let timerInterval;
@@ -78,7 +79,11 @@ function displayScrambledWord() {
         clearInterval(timerInterval);
         startTimer(15);
     } else {
-        alert('Game Over! You have scrambled all the words.');
+        if (score === 15) {
+            alert('Congratulations! You Win! You correctly unscrambled all the words.');
+        } else {
+            alert('Game Over! You have scrambled all the words.');
+        }
     }
 }
 
@@ -93,7 +98,7 @@ function startTimer(seconds) {
 
         if (timeLeft === 0) {
             clearInterval(timerInterval);
-            alert(`Time is up! The word was "${words[currentWordIndex].word}". Try the next word.`)
+            alert(`Time is up! Try the next word.`)
             currentWordIndex++;
             displayScrambledWord();
         }
