@@ -101,6 +101,16 @@ p {
     font-size: 1.2em;
 }
 
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link {
+    cursor: pointer;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
     header, article {
